@@ -1,0 +1,2 @@
+Added both "npm-sass": "^3.0.0" and  "sass": "^1.45.1" as dependencies in package.json
+    Will this cause any issues?
