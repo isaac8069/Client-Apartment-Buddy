@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import { signUp, signIn } from '../../api/auth'
-import messages from '../shared/AutoDismissAlert/messages'
+import messages from '../alerts/AutoDismissAlert//messages'
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'

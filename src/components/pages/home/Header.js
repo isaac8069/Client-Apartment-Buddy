@@ -2,10 +2,12 @@ import React, { Fragment } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import { Link } from 'react-router-dom'
+
 const linkStyle = {
     color: 'white',
     textDecoration: 'none'
 }
+
 const authenticatedOptions = (
     <>
         <Nav.Link>
@@ -18,6 +20,11 @@ const authenticatedOptions = (
                 Sign Out
             </Link>
         </Nav.Link>
+        <Nav.Link>
+			<Link to='apartment' style={linkStyle}>
+				Apartment
+			</Link>
+		</Nav.Link>
     </>
 )
 
@@ -43,7 +50,7 @@ const alwaysOptions = (
 )
 
 const Header = ({ user }) => (
-    <Navbar bg='primary' variant='dark' expand='md'>
+    <Navbar bg='secondary' variant='dark' expand='md'>
         <Navbar.Brand>
             <Link to='/' style={linkStyle}>
                 Appartment Buddy
@@ -52,10 +59,10 @@ const Header = ({ user }) => (
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ml-auto'>
-                {user && (
+                {/* {user && (
                     <span className='navbar-text mr-2'>Welcome, {user.email}</span>
                 )}
-                {alwaysOptions}
+                {alwaysOptions} */}
                 {user ? authenticatedOptions : unauthenticatedOptions}
             </Nav>
         </Navbar.Collapse>
